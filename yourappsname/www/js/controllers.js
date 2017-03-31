@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('yourappname.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -18,15 +18,6 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
     $scope.modal = modal;
   });
-
-  $scope.playlists = [
-    { title: 'Test', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -51,7 +42,7 @@ angular.module('starter.controllers', [])
   console.log("app ctrl");
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('MyStocksCtrl', function($scope) {
   $scope.playlists = [
     { title: 'array object title', id: 1 },
     { title: 'Chill', id: 2 },
@@ -59,13 +50,13 @@ angular.module('starter.controllers', [])
     { title: 'Indie', id: 4 },
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 },
-    { title: 'new data from controller', id: 7 }  
+    { title: 'new data from controller', id: 7 }
   ];
     console.log("playlists ctrl");
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
   $scope.dynamicViewFromParam = $stateParams.id;
-  
+
   console.log("playlist ctrl");
 });
